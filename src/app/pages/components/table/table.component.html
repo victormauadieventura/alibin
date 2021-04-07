@@ -14,6 +14,7 @@
           <ng-container *ngFor="let column of columns">
             <td [ngStyle]="column.style">
               <span *ngIf="column.dataType === 'currency'">R$</span>
+              <span *ngIf="column.dataType === 'percentage'"><i class="fas fa-chart-line"></i></span>
               {{ item[column.field] }}
               <span *ngIf="column.dataType === 'percentage'">%</span>
             </td>
