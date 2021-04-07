@@ -1,0 +1,25 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <ng-container *ngFor="let column of columns">
+          <th scope="col">{{ column.header }}</th>
+        </ng-container>
+          <th scope="col"><i class="fas fa-ellipsis-v"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let item of data">
+        <tr>
+          <ng-container *ngFor="let column of columns">
+            <td [ngStyle]="column.style">
+              <span *ngIf="column.dataType === 'currency'">R$</span>
+              {{ item[column.field] }}
+              <span *ngIf="column.dataType === 'percentage'">%</span>
+            </td>
+          </ng-container>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
