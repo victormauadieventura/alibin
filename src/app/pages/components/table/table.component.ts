@@ -8,12 +8,19 @@ import { Column } from './models';
 })
 export class TableComponent implements OnInit {
 
+  @Input() data: any[] = [];
+  @Input() columns: Column[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.columns);
   }
 
-  @Input() data: any[] = [];
-  @Input() columns: Column[] = [];
+  onSelectedChange() {
+    const selecteds: Column[] = this.columns.filter(intervention => intervention.selected);
+    console.log(selecteds);
+    // this.selectedChange.emit(selecteds);
+  }
 
 }

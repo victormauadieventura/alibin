@@ -12,7 +12,8 @@ export class HomeComponent implements OnInit {
     {
       header: 'Nº Cliente',
       field: 'id',
-      dataType: 'number'
+      dataType: 'number',
+      selected: true
     },
     {
       header: 'Cliente',
@@ -20,7 +21,8 @@ export class HomeComponent implements OnInit {
       dataType: 'text',
       style: {
         'text-transform': 'uppercase'
-      }
+      },
+      selected: true
     },
     {
       header: 'QTD. Chargeback',
@@ -28,12 +30,14 @@ export class HomeComponent implements OnInit {
       dataType: 'number',
       style: {
         'text-align': 'center'
-      }
+      },
+      selected: true
     },
     {
       header: 'Valor Chargeback',
       field: 'amount_chargeback',
-      dataType: 'currency'
+      dataType: 'currency',
+      selected: true
     },
     {
       header: 'QTD. Vendas',
@@ -41,12 +45,14 @@ export class HomeComponent implements OnInit {
       dataType: 'number',
       style: {
         'text-align': 'center'
-      }
+      },
+      selected: true
     },
     {
       header: 'Valor Total',
       field: 'total_amount',
-      dataType: 'currency'
+      dataType: 'currency',
+      selected: true
     },
     {
       header: '% Chargeback',
@@ -55,7 +61,8 @@ export class HomeComponent implements OnInit {
       style: {
         'text-align': 'center',
         'color': '#e2756f'
-      }
+      },
+      selected: true
     },
     {
       header: '% Total Chargeback',
@@ -64,7 +71,8 @@ export class HomeComponent implements OnInit {
       style: {
         'text-align': 'center',
         'color': '#e2756f'
-      }
+      },
+      selected: true
     },
   ];
 

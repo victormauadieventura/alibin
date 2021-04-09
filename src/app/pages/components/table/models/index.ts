@@ -3,4 +3,5 @@ export interface Column {
   field?: string;
   dataType?: 'text' | 'number' | 'date' | 'currency' | 'percentage';
   style?: { [className: string]: string };
+  selected?: boolean;
 }
