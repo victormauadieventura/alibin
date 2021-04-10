@@ -1,0 +1,26 @@
+<div class="btn-group" dropdown placement="bottom right" [insideClick]="true">
+  <button id="button-alignment" dropdownToggle type="button" aria-controls="dropdown-alignment">
+    <i class="fas fa-ellipsis-v"></i>
+  </button>
+  <ul id="dropdown-alignment" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="button-alignment">
+      <h6>Linhas por página</h6>
+      <li>
+        <input type="checkbox" name="pattern" checked /> Padrão
+      </li>
+      <li>
+        <input type="checkbox" name="fifty-lines" /> 50 linhas
+      </li>
+      <h6 style="margin-top: 15px;">Colunas</h6>
+      <ng-container *ngFor="let column of columns">
+        <li>
+          <input
+            type="checkbox"
+            [ngModel]="column.selected"
+            name="{{ column.field }}-selected"
+            (ngModelChange)="column.selected = $event; onSelectedChange()"
+          />
+          {{ column.header }}
+        </li>
+      </ng-container>
+  </ul>
+</div>

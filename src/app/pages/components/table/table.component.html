@@ -8,9 +8,7 @@
           </ng-container>
         </ng-container>
         <th scope="col">
-          <button type="button">
-            <i class="fas fa-ellipsis-v"></i>
-          </button>
+          <app-table-options [columns]='columns'></app-table-options>
         </th>
       </tr>
     </thead>
@@ -32,30 +30,4 @@
       </ng-container>
     </tbody>
   </table>
-</div>
-
-<div class="options">
-  <h6>Linhas por página</h6>
-  <ul>
-    <li>
-      <input type="checkbox" name="pattern" checked /> Padrão
-    </li>
-    <li>
-      <input type="checkbox" name="fifty-lines" /> 50 linhas
-    </li>
-  </ul>
-  <h6>Colunas</h6>
-  <ul>
-    <ng-container *ngFor="let column of columns">
-    <li>
-        <input
-          type="checkbox"
-          [ngModel]="column.selected"
-          name="{{ column.field }}-selected"
-          (ngModelChange)="column.selected = $event; onSelectedChange()"
-        />
-        {{ column.header }}
-      </li>
-    </ng-container>
-  </ul>
 </div>

@@ -14,13 +14,5 @@ export class TableComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.columns);
   }
-
-  onSelectedChange() {
-    const selecteds: Column[] = this.columns.filter(intervention => intervention.selected);
-    console.log(selecteds);
-    // this.selectedChange.emit(selecteds);
-  }
-
 }

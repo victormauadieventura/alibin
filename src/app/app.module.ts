@@ -6,16 +6,23 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { routing } from './app.routing';
 import { TableComponent } from './pages/components/table/table.component';
+import { TableOptionsComponent } from './pages/components/table/table-options/table-options.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TableComponent
+    TableComponent,
+    TableOptionsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    BsDropdownModule.forRoot(),
+    BrowserAnimationsModule,
+    routing,
   ],
   providers: [
     {
